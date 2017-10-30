@@ -6,13 +6,8 @@ export default class Houses extends Component {
         
     }
 
-    componentWillReceiveProps(newProps){
-        console.log(newProps)
-    }
 
     render(){
-        // let this.props.houses[this.state.index] = this.props.houses[this.state.index]
-        console.log(this.props.house)
         return(
             <div className="houses">
                 {
@@ -20,9 +15,7 @@ export default class Houses extends Component {
                     <div>
                         <img src={this.props.house.img} alt="halloween house"/>
                         <h3>{this.props.house.candy}</h3>
-                        <button onClick={() => {
-                            this.props.getCandy(this.props.house.candy);
-                        }} disabled={this.props.lastHouse}>Get Candy!</button>
+                        <button onClick={/*getCandy*/} disabled={this.props.lastHouse}>Get Candy!</button>
                         <button disabled={this.props.lastHouse} onClick={() => this.props.changeHouse()}>Too spooky - SKIP</button>
                     </div>
                     :
